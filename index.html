@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Spotify Glass</title>
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body>
+    <main>
+      <div class="btnClass"><button></button></div>
+      <div class="logoClass">
+        <h6>S</h6>
+        <h6>p</h6>
+        <h6>o</h6>
+        <h6>t</h6>
+        <h6>i</h6>
+        <h6>f</h6>
+        <h6>y</h6>
+        <img id="logo" src="logo.svg" alt="Logo" />
+      </div>
+      <span></span>
+      <div class="navClass">
+        <h1>Menu</h1>
+        <ul>
+          <li><img src="home-outline.svg" alt="" /> Home</li>
+          <li><img src="search-outline.svg" alt="" /> Search</li>
+          <li><img src="library-outline.svg" alt="" /> Your Library</li>
+          <li><img src="list-circle-outline.svg" alt="" /> Playlist</li>
+          <li><img src="notifications-outline.svg" alt="" /> Notifications</li>
+          <li><img src="settings-outline.svg" alt="" /> Settings</li>
+        </ul>
+      </div>
+      <span></span>
+      <div id="player">
+        <div id="imgList" class="imgClass">
+          <img id="coverProfile" class="card" src="covers/1.png" alt="" />
+          <h4 id="songName">Baarishein</h4>
+        </div>
+        <div id="musicPlayer">
+          <input
+            type="range"
+            name="range"
+            id="myProgressBar"
+            value="0"
+            min="0"
+            max="100"
+          />
+          <div id="controls">
+            <img id="previous" src="play-back.svg" alt="Back" />
+            <img id="playPause" src="play-circle.svg" alt="Play/Pause" />
+            <img id="next" src="play-forward.svg" alt="Next" />
+          </div>
+        </div>
+      </div>
+      <span></span>
+      <div id="info">
+        <div id="infoContainer">
+          <img src="user.jpg" alt="" />
+          <div id="userInfo">
+            <h4>Rahul Sankhwar</h4>
+            <h6>Template Creator</h6>
+          </div>
+        </div>
+        <img id="logOut" src="log-out-outline.svg" alt="" />
+      </div>
+    </main>
+    <script src="index.js"></script>
+    <script type="text/javascript" src="vanilla-tilt.js"></script>
+    <script type="text/javascript">
+      VanillaTilt.init(document.querySelectorAll(".card"), {
+        max: 25,
+        speed: 400,
+        glare: true,
+        "max-glare": 1,
+      });
+    </script>
+  </body>
+</html>
